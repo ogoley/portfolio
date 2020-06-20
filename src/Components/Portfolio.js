@@ -9,7 +9,7 @@ export default function Portfolio() {
   return (
     <Container className="portfolio">
       <Row className="m-md-4">
-        <ProjectCol link="https://www.google.com" imgUrl={statsImg} title="Geomotry Website" text="Use CSS to create 3D geometrical environments" />
+        <ProjectCol link="https://www.google.com" imgUrl={statsImg} title="GeomotrY Website" text="Use CSS to create 3D geometrical environments" />
         <ProjectCol link="https://www.google.com" imgUrl={workImg} title="Quiz App" text="A socket.io app that allows people to play a quiz game together" />
         <ProjectCol
           link="https://www.google.com"

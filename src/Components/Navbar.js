@@ -28,7 +28,7 @@ export default class Navbar extends Component {
                 </a>
               </li>
               <li class="nav-item nav-fill w-100">
-                <a class="nav-link " href="/portfolio">
+                <a class="nav-link " href="/#/portfolio">
                   Portfolio
                 </a>
               </li>
