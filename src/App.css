@@ -150,14 +150,9 @@ body {
 }
 
 .card:hover .card-img-top {
-  opacity: 0%;
+  opacity: 0;
   transition: 1s;
   transform: scale(1.1);
-}
-
-.card:hover .card-body,
-.card:hover .btn {
-  opacity: 100%;
 }
 
 .btn {
@@ -168,15 +163,19 @@ body {
 
 .card-body,
 .btn {
-  opacity: 0%;
+  opacity: 100;
 }
 
 .card-body
  {
-  opacity: 0%;
   color:var(--mainWhite);
   font-weight:700;
   margin:auto;
+}
+
+.card:hover  .card-body,
+.card:hover  .btn {
+  opacity: 100;
 }
 
 

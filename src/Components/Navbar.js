@@ -1,8 +1,14 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import logo from "../Assets/jo.png";
+import { Button } from 'react-bootstrap'
 import { GradientTop } from "./Gradient";
+import auth from '../Auth'
+import { withRouter } from "react-router";
 
-export default class Navbar extends Component {
+ class Navbar extends Component {
+
+
   render() {
     return (
       <React.Fragment>
@@ -23,20 +29,20 @@ export default class Navbar extends Component {
           <div class="collapse navbar-collapse order-2 order-lg-0 justify-content-end w-100" id="navbarSupportedContent">
             <ul class="navbar-nav nav-fill w-50">
               <li class="nav-item nav-fill w-100">
-                <a class="nav-link nav-fill w-100" href="/">
+                <a class="nav-link nav-fill w-100" href="#/">
                   Home
                 </a>
               </li>
               <li class="nav-item nav-fill w-100">
-                <a class="nav-link " href="/#/portfolio">
+                <a class="nav-link " href="#/projects">
                   Portfolio
                 </a>
               </li>
             </ul>
           </div>
 
-          <a class="navbar-brand mx-auto order-1 order-lg-1 p-0" href="/#">
-            <img src="/img/jo.png" height="80" alt="" />
+          <a class="navbar-brand mx-auto order-1 order-lg-1 p-0" href="#/">
+            <img src= {logo} height="80" alt="" />
           </a>
 
           <div class="collapse navbar-collapse order-3 order-lg-2 w-100" id="navbarSupportedContent">
@@ -73,6 +79,7 @@ export default class Navbar extends Component {
               </li>
             </ul>
           </div>
+          <Button onClick={this.props.auth.login}>Login</Button>
         </nav>
       </React.Fragment>
     );
@@ -87,3 +94,5 @@ const NavWrapper = styled.nav`
     text-transform: capitalize;
   }
 `;
+
+export default withRouter(Navbar);

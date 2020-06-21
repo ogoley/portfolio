@@ -1,35 +1,27 @@
-import React from "react";
-// import { Switch, Route } from "react-router-dom";
-import "./App.css";
+import React, { Component } from 'react';
+import { HashRouter, Route, Link } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import Portfolio from "./Components/Portfolio";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import Callback from "./Components/Callback"
+import "./App.css";
 
+console.log('wtf' , this)
 
-function App() {
-  return (
-    <React.Fragment>
-      <HashRouter basename = {process.env.PUBLIC_URL + '/'}>
+class App extends Component {
+  render() {
+    console.log('wtf' , this)
+    return (
+      <HashRouter basename="/">
         <div>
-          <Navbar />
-            <Route exact path="/" component={Home} />
-            <Route path="/portfolio" component={Portfolio} />
-            </div>
+          <Navbar {...this.props}/>
+          <Route {...this.props} path="/projects" component={Portfolio} />
+          <Route {...this.props} path="/callback" component={Callback}/>
+          <Route exact path="/" component={Home} />
+        </div>
       </HashRouter>
-    </React.Fragment>
-  );
+    );
+  }
 }
-
-/*
-SWITCH EXAMPLE 
-
-
-<Switch>
-        <Route exact path="/" component={ProductList}></Route>
-        <Route path="/details" component={Details}></Route>
-        <Route component={Default}></Route>}
-</Switch>
-*/
 
 export default App;
